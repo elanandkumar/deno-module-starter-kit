@@ -1,5 +1,5 @@
-import { bold } from './deps.ts';
+import { bold } from "./deps.ts";
 
 export function getHelloWorld(): string {
-    return bold('Hello World!');
+  return bold("Hello World!");
 }
