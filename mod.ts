@@ -1,5 +1,5 @@
 import { bold } from "./deps.ts";
 
 export function getHelloWorld(): string {
-  return bold("Hello World!");
+  return bold("Welcome to deno land!");
 }
