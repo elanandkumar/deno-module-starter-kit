@@ -1,6 +1,11 @@
 import { assertEquals } from "./test_deps.ts";
-import { getHelloWorld } from "./mod.ts";
+import { IQuote, getRandomQuote } from "./mod.ts";
 
-Deno.test("Should say hello world", function test_get_hello_world() {
-  assertEquals(getHelloWorld(), "\x1b[1mHello World!\x1b[22m");
+Deno.test("Should return a object with quote and author", function test_get_random_quote() {
+  const quote: IQuote = getRandomQuote();
+
+  assertEquals(quote.hasOwnProperty("text"), true);
+  assertEquals(quote.hasOwnProperty("author"), true);
+  assertEquals(typeof quote.text, "string");
+  assertEquals(typeof quote.author, "string");
 });
